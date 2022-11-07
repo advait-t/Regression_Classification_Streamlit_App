@@ -1,5 +1,23 @@
-from pycaret.regression import *
-from typing import final
+# from pycaret.regression import *
+
+try:
+    from pycaret.regression import compare_models
+    from pycaret.regression import create_model
+    from pycaret.regression import pull
+    from pycaret.regression import create_model
+    from pycaret.regression import tune_model
+    from pycaret.regression import finalize_model
+    from pycaret.regression import get_config
+    from pycaret.regression import save_model
+    from pycaret.regression import load_model
+    from pycaret.regression import download_model
+    from pycaret.regression import download_configs
+    from pycaret.regression import save_config
+    from pycaret.regression import setup
+except:
+    pass
+
+# from typing import final
 import all_function
 import pandas as pd
 import seaborn as sns

@@ -1,15 +1,30 @@
 import sys
 # from typing import final
 # from typing_extensions import final
-from pycaret.classification import compare_models, create_model, finalize_model, get_config, predict_model, save_config, save_model, setup, tune_model, retrain_model
+try:
+    # from pycaret.classification import compare_models
+    # from pycaret.classification import create_model
+    # from pycaret.classification import pull
+    # from pycaret.classification import create_model
+    # from pycaret.classification import tune_model
+    # from pycaret.classification import finalize_model
+    # from pycaret.classification import get_config
+    # from pycaret.classification import save_model
+    # from pycaret.classification import load_model
+    # from pycaret.classification import download_model
+    # from pycaret.classification import download_configs
+    # from pycaret.classification import save_config
+    # from pycaret.classification import setup
+    from pycaret.classification import *
+except:
+    pass
+# from pycaret.classification import compare_models, create_model, finalize_model, get_config, predict_model, save_config, save_model, setup, tune_model, retrain_model
 import all_function
 import pandas as pd
 import seaborn as sns
 from main import *
 # from all_function import *
 from global_functions import *
-
-
 
 def classifiction_model_function(data, final_columns1, parameter_to_be_optimized, target):
     final_model1, data_setup1, best_model, configs_path, best_model_results, model_name = setting_up_automl_classification(data, final_columns1, parameter_to_be_optimized, target)
