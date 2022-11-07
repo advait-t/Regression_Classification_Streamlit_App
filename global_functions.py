@@ -13,7 +13,23 @@ import matplotlib.pyplot as plt
 import statistics
 
 from shapash.explainer.smart_explainer import SmartExplainer
-from pycaret.classification import *
+# from pycaret.classification import *
+try:
+    from pycaret.classification import compare_models
+    from pycaret.classification import create_model
+    from pycaret.classification import pull
+    from pycaret.classification import create_model
+    from pycaret.classification import tune_model
+    from pycaret.classification import finalize_model
+    from pycaret.classification import get_config
+    from pycaret.classification import save_model
+    from pycaret.classification import load_model
+    from pycaret.classification import download_model
+    from pycaret.classification import download_configs
+    from pycaret.classification import save_config
+    from pycaret.classification import setup
+except:
+    pass
 
 from imblearn.under_sampling import RandomUnderSampler
 from lightgbm import *
